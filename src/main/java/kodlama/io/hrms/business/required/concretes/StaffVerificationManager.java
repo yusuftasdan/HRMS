@@ -1,8 +1,8 @@
-package kodlama.io.hrms.business.concretes;
+package kodlama.io.hrms.business.required.concretes;
 
 import org.springframework.stereotype.Service;
 
-import kodlama.io.hrms.business.abstracts.StaffVerificationService;
+import kodlama.io.hrms.business.required.abstracts.StaffVerificationService;
 import kodlama.io.hrms.entities.concretes.Employer;
 
 @Service

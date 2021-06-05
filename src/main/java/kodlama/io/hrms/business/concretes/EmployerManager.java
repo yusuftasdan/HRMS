@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kodlama.io.hrms.business.abstracts.StaffVerificationService;
-import kodlama.io.hrms.business.abstracts.EmployerCheckService;
 import kodlama.io.hrms.business.abstracts.EmployerService;
-import kodlama.io.hrms.business.abstracts.UserCheckService;
+import kodlama.io.hrms.business.required.abstracts.EmployerCheckService;
+import kodlama.io.hrms.business.required.abstracts.StaffVerificationService;
+import kodlama.io.hrms.business.required.abstracts.UserCheckService;
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.ErrorResult;
 import kodlama.io.hrms.core.utilities.results.Result;

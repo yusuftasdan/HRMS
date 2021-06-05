@@ -1,9 +1,9 @@
-package kodlama.io.hrms.business.concretes;
+package kodlama.io.hrms.business.required.concretes;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kodlama.io.hrms.business.abstracts.CandidateCheckService;
+import kodlama.io.hrms.business.required.abstracts.CandidateCheckService;
 import kodlama.io.hrms.dataAccess.abstracts.CandidateDao;
 import kodlama.io.hrms.entities.concretes.Candidate;
 

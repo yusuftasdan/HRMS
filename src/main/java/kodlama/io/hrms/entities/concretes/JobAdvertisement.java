@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +21,7 @@ import lombok.NoArgsConstructor;
 @Table(name="job_adverts")
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class JobAdvertisement {
 	
 	@Id
@@ -31,7 +30,6 @@ public class JobAdvertisement {
 	private int id;
 	
 	@Column(name="creating_date")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
 	private LocalDate creatingDate;
 	
 	@Column(name="ending_date")
@@ -61,6 +59,7 @@ public class JobAdvertisement {
 	private JobTitle jobTitle;
 	
 	@ManyToOne
+	
 	@JoinColumn(name="city_id", referencedColumnName = "id")
 	private City city;
 	
