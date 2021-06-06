@@ -8,6 +8,6 @@ import kodlama.io.hrms.entities.concretes.JobAdvertisement;
 
 public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Integer> {
 	
-	List<JobAdvertisement> findByIsActive (boolean status);
+	List<JobAdvertisement> findAllByIsActive (boolean status);
 
 }
