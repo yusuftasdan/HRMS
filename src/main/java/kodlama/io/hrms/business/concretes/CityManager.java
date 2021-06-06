@@ -32,7 +32,7 @@ public class CityManager implements CityService {
 	@Override
 	public Result add(City city) {
 		this.cityDao.save(city);
-		return new SuccessResult("Şehir bilgisi eklendi.");
+		return new SuccessResult("Şehir bilgisi eklendi. a");
 	}
 
 }
