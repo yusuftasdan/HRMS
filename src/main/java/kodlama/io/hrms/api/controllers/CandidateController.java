@@ -4,13 +4,15 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlama.io.hrms.business.abstracts.CandidateService;
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.Result;
-import kodlama.io.hrms.entities.concretes.Candidate;
+import kodlama.io.hrms.entities.dtos.CandidateAddDto;
+import kodlama.io.hrms.entities.dtos.CandidateListDto;
 
 @RestController
 @RequestMapping("/api/candidates")
@@ -24,13 +26,13 @@ public class CandidateController {
 	}
 	
 	@GetMapping("/getall")
-	public DataResult<List<Candidate>> getAll(){
+	public DataResult<List<CandidateListDto>> getAll(){
 		return this.candidateService.getAll();
 	}
 	
 	@PostMapping("/add")
-	public Result add(Candidate candidate) {
-		return this.candidateService.add(candidate);
+	public Result add(@RequestBody CandidateAddDto candidateAddDto) {
+		return this.candidateService.add(candidateAddDto);
 	}
 
 }

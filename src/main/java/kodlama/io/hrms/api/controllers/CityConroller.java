@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlama.io.hrms.business.abstracts.CityService;
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.Result;
-import kodlama.io.hrms.entities.concretes.City;
+import kodlama.io.hrms.entities.dtos.CityDto;
 
 @RestController
 @RequestMapping("/api/cities")
@@ -26,12 +26,12 @@ public class CityConroller {
 	}
 	
 	@GetMapping("/getall")
-	public DataResult<List<City>> getAll(){
+	public DataResult<List<CityDto>> getAll(){
 		return this.cityService.getAll();
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestBody City city) {
-		return this.cityService.add(city);
+	public Result add(@RequestBody CityDto cityDto) {
+		return this.cityService.add(cityDto);
 	}
 }
