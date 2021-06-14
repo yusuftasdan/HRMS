@@ -1,10 +1,10 @@
 package kodlama.io.hrms.business.required.abstracts;
 
-import kodlama.io.hrms.entities.concretes.JobTitle;
+import kodlama.io.hrms.entities.dtos.JobTitleDto;
 
 public interface JobTitleCheckService {
 
-	public boolean isTitleAlreadyUsed (JobTitle jobTitle);
+	public boolean isTitleAlreadyUsed (JobTitleDto jobTitleDto);
 	
 	
 }

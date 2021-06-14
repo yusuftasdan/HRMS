@@ -4,12 +4,12 @@ import java.util.List;
 
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.Result;
-import kodlama.io.hrms.entities.dtos.JobTitleDto;
+import kodlama.io.hrms.entities.dtos.GradueteAddDto;
 
-public interface JobTitleService {
+public interface GraduateService {
 	
-	DataResult<List<JobTitleDto>> getAll();
+	DataResult<List<GradueteAddDto>> getAll();
 	
-	Result add(JobTitleDto jobTitleDto);
+	Result add(GradueteAddDto gradueteAddDto);
 
 }

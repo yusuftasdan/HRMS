@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import kodlama.io.hrms.business.required.abstracts.JobTitleCheckService;
 import kodlama.io.hrms.dataAccess.abstracts.JobTitleDao;
-import kodlama.io.hrms.entities.concretes.JobTitle;
+import kodlama.io.hrms.entities.dtos.JobTitleDto;
 
 @Service
 public class JobTitleCheckManager implements JobTitleCheckService {
@@ -17,8 +17,8 @@ public class JobTitleCheckManager implements JobTitleCheckService {
 	}
 
 	@Override
-	public boolean isTitleAlreadyUsed(JobTitle jobTitle) {
-		if(jobTitleDao.findAllByTitle(jobTitle.getTitle()).stream().count() !=0) {
+	public boolean isTitleAlreadyUsed(JobTitleDto jobTitleDto) {
+		if(jobTitleDao.findAllByTitle(jobTitleDto.getTitle()).stream().count() !=0) {
 		return false;
 	}
 	return true;

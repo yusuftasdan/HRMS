@@ -8,31 +8,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlama.io.hrms.business.abstracts.JobTitleService;
+import kodlama.io.hrms.business.abstracts.GraduateService;
 import kodlama.io.hrms.core.utilities.results.DataResult;
 import kodlama.io.hrms.core.utilities.results.Result;
-import kodlama.io.hrms.entities.dtos.JobTitleDto;
+import kodlama.io.hrms.entities.dtos.GradueteAddDto;
 
 @RestController
-@RequestMapping("/api/jobAdvertisements")
-public class JobTitleController {
+@RequestMapping("/api/graduates")
+public class GraduateController {
 	
-	private JobTitleService jobTitleService;
+	private GraduateService graduateService;
 
 	@Autowired
-	public JobTitleController(JobTitleService jobTitleService) {
+	public GraduateController(GraduateService graduateService) {
 		super();
-		this.jobTitleService = jobTitleService;
+		this.graduateService = graduateService;
 	}
 	
-	@GetMapping("/getall")
-	public DataResult<List<JobTitleDto>> getAll(){
-		return this.jobTitleService.getAll();
+	@GetMapping("/getAll")
+	public DataResult<List<GradueteAddDto>> getAll(){
+		return this.graduateService.getAll();
 	}
 	
 	@PostMapping("/add")
-	public Result add(JobTitleDto jobTitleDto) {
-		return this.jobTitleService.add(jobTitleDto);
+	public Result add(GradueteAddDto gradueteAddDto) {
+		return this.graduateService.add(gradueteAddDto);
 	}
 
 }
