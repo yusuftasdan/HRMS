@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ResumeAddDto {
 
+	private int id;
+	
 	private String photo;
 
 	private String githubLink;
@@ -24,12 +26,6 @@ public class ResumeAddDto {
 	private LocalDate updatingDate;
 
 	private boolean isActive;
-
-	private int technologyId;
-
-	private int languageId;
-
-	private int jobExperienceId;
 
 	private int candidateId;
 
