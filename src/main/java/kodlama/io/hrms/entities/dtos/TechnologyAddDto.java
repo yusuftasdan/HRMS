@@ -11,8 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TechnologyAddDto {
 	
+	private int id;
+	
 	private String description;
 
 	private LocalDate creatingDate;
+	
+	private int resumesId;
 
 }

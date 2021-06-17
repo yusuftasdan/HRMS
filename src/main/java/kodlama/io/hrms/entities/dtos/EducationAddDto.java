@@ -11,6 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class EducationAddDto {
 	
+	private int id;
+	
+	private int resumesId;
+	
 	private String schoolName;
 
 	private String schoolDepartment;

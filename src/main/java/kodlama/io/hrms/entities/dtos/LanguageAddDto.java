@@ -10,11 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LanguageAddDto {
+	
+	private int id;
 
 	private String language;
 
 	private char level;
 
 	private LocalDate creatingDate;
+	
+	private int resumesId;
 
 }

@@ -1,7 +1,12 @@
 package kodlama.io.hrms.entities.dtos;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import kodlama.io.hrms.entities.concretes.Education;
+import kodlama.io.hrms.entities.concretes.JobExperience;
+import kodlama.io.hrms.entities.concretes.Language;
+import kodlama.io.hrms.entities.concretes.Technology;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,12 +30,16 @@ public class ResumeListDto {
 
 	private boolean isActive;
 
-	private int technologyId;
+	private List<Technology> technologies;
 
-	private int languegeLanguege;
+	private List<Language> languages;
 
-	private int jobExperienceId;
+	private List<JobExperience> jobExperience;
+	
+	private List<Education> education;
 
-	private int candidateFirstName;
+	private int candidateId;
+	
+	private String candidateFirstName;
 	
 }

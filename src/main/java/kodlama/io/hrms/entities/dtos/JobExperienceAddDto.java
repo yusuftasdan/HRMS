@@ -12,7 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JobExperienceAddDto {
 	
-	private String companyName;
+	private int id;
+	
+	private String oldCompanyName;
 	
 	private LocalDate startingDate;
 	
@@ -20,6 +22,8 @@ public class JobExperienceAddDto {
 	
 	private LocalDate creatingDate;
 	
-	private String jobTitleId;
+	private int jobTitleId;
+	
+	private int resumesId;
 
 }

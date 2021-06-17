@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class EducationListDto {
 	
+	private int id;
+	
 	private String schoolName;
 
 	private String schoolDepartment;
@@ -22,5 +24,7 @@ public class EducationListDto {
 	private LocalDate creatingDate;
 
 	private String graduateDescription;
+	
+	private int resumeId;
 
 }

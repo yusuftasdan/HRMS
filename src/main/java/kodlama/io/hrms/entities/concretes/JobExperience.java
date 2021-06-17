@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,8 +30,8 @@ public class JobExperience {
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="company_name")
-	private String companyName;
+	@Column(name="old_company_name")
+	private String oldCompanyName;
 	
 	@Column(name="starting_date")
 	private LocalDate startingDate;
@@ -43,8 +46,9 @@ public class JobExperience {
 	@JoinColumn(name="job_title_id", referencedColumnName = "id")
 	private JobTitle jobTitle;
 	
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne(targetEntity = Resume.class)
-	@JoinColumn(name="resume_id")
+	@JoinColumn(name="resume_id", referencedColumnName = "id")
 	private Resume resumes;
 
 }

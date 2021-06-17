@@ -52,10 +52,10 @@ public class Resume {
 	private boolean isActive;
 	
 	@OneToMany(mappedBy = "resumes", cascade = CascadeType.ALL)
-	private List<Technology> technology;
+	private List<Technology> technologies;
 	
 	@OneToMany(mappedBy = "resumes", cascade = CascadeType.ALL)
-	private List<Language> language;
+	private List<Language> languages;
 	
 	@OneToMany(mappedBy = "resumes", cascade = CascadeType.ALL)
 	private List<JobExperience> jobExperience;
